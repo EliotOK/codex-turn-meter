@@ -9,7 +9,7 @@ from pathlib import Path
 
 parser=argparse.ArgumentParser();parser.add_argument('--thread-id');args=parser.parse_args()
 root=Path(__file__).resolve().parents[1]
-proc=subprocess.Popen([sys.executable,'-u',str(root/'codex-turn-meter/server/server.py')],
+proc=subprocess.Popen([sys.executable,'-u',str(root/'plugins/codex-turn-meter/server/server.py')],
                       stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8')
 replies=queue.Queue()
 threading.Thread(target=lambda:[replies.put(json.loads(line)) for line in proc.stdout],daemon=True).start()

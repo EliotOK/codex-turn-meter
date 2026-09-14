@@ -11,7 +11,7 @@ def main():
     if sys.version_info < (3,10):
         raise SystemExit('Python 3.10+ is required.')
     home=Path.home()
-    source=Path(__file__).resolve().parent/'codex-turn-meter'
+    source=Path(__file__).resolve().parent/'plugins'/'codex-turn-meter'
     target=home/'plugins'/'codex-turn-meter'
     helpers=home/'.codex/skills/.system/plugin-creator/scripts'
     create=helpers/'create_basic_plugin.py'

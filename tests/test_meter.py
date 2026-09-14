@@ -6,7 +6,7 @@ import threading
 import unittest
 from pathlib import Path
 
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'codex-turn-meter/server'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'plugins/codex-turn-meter/server'))
 from collector import Reader, Store, accounting
 from server import Server, URI
 

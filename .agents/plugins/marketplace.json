@@ -1,0 +1,20 @@
+{
+  "name": "eliotok",
+  "interface": {
+    "displayName": "EliotOK"
+  },
+  "plugins": [
+    {
+      "name": "codex-turn-meter",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-turn-meter"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

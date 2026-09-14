@@ -52,3 +52,14 @@
 「最近请求 · 本轮起点未知」；统计范围切换与全部口径保持不变，不虚构差值。
 14 项后端测试、Edge 模拟宿主交互测试（新增回退断言：数字取最近请求、标签可见、
 缓存比例 80.0%）通过；已重新安装并重打包 ZIP（SHA256SUMS 已更新）。
+
+## 仓库改造为第三方 Git 市场
+
+2026-09-14。仓库改为市场布局：插件移至 `plugins/codex-turn-meter/`，
+新增 `.agents/plugins/marketplace.json`（市场名 `eliotok`），同步更新
+install.py / configure.py / 三个测试脚本的路径引用。验证：14 项后端测试、
+Edge 模拟宿主测试通过；validate_plugin 通过；`codex plugin marketplace add`
+本地实测能识别 `codex-turn-meter@eliotok`（验证后移除测试源）；个人市场重装
+正常。ZIP 内部路径保持 `codex-turn-meter/` 前缀不变，SHA256 与上一版一致。
+订阅安装：`codex plugin marketplace add EliotOK/codex-turn-meter` +
+`codex plugin add codex-turn-meter@eliotok`。

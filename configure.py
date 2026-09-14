@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-root=Path(__file__).resolve().parent/'codex-turn-meter'
+root=Path(__file__).resolve().parent/'plugins'/'codex-turn-meter'
 manifest={
  'name':'codex-turn-meter','version':'0.1.0',
  'description':'按交互更新的本地 Codex 用量面板。',

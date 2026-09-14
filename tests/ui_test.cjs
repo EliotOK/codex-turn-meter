@@ -3,9 +3,9 @@ const path=require('node:path');
 const assert=require('node:assert/strict');
 const {chromium}=require(process.env.METER_PLAYWRIGHT||'C:/Users/19000/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const root=path.resolve(__dirname,'..');
-let html=fs.readFileSync(path.join(root,'codex-turn-meter/ui/panel.html'),'utf8')
- .replace('/* PANEL_CSS */',fs.readFileSync(path.join(root,'codex-turn-meter/ui/panel.css'),'utf8'))
- .replace('/* PANEL_JS */',fs.readFileSync(path.join(root,'codex-turn-meter/ui/panel.js'),'utf8'));
+let html=fs.readFileSync(path.join(root,'plugins/codex-turn-meter/ui/panel.html'),'utf8')
+ .replace('/* PANEL_CSS */',fs.readFileSync(path.join(root,'plugins/codex-turn-meter/ui/panel.css'),'utf8'))
+ .replace('/* PANEL_JS */',fs.readFileSync(path.join(root,'plugins/codex-turn-meter/ui/panel.js'),'utf8'));
 const sample=(status,revision,input=12500)=>({thread_id:'task-a',thread_name:'查询 Codex 缓存与上下文用量',turn_id:'turn-a',status,revision,
  turn:{input_tokens:input,cached_input_tokens:input*.8,cache_percent:80,output_tokens:1200,reasoning_output_tokens:200},
  last:{input_tokens:input,cached_input_tokens:input*.8,cache_percent:80,output_tokens:1200},
