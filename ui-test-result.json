@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "handshake",
+    "task selection",
+    "omitted note",
+    "unchanged wait",
+    "turn start",
+    "turn completion",
+    "pause/resume",
+    "stale task response",
+    "turn fallback",
+    "teardown",
+    "layout 760/390/280"
+  ],
+  "pageErrors": [],
+  "host": "simulated MCP App bridge, real Edge"
+}

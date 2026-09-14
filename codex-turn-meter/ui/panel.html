@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>/* PANEL_CSS */</style></head>
+<body><main>
+  <header><div class="brand"><span class="dot"></span><strong>用量</strong><span id="status">等待连接</span></div><div class="actions"><button id="refresh" title="读取当前已上报统计">刷新</button><button id="pause">暂停</button><button id="expand" aria-expanded="false">详情</button></div></header>
+  <section class="metrics" aria-label="任务用量"><div><span>上下文参考</span><strong id="context">—</strong><small id="window">等待统计</small></div><div><span>输入缓存命中</span><strong id="cache">—</strong><small id="cached">本轮提问</small></div><div><span>输入</span><strong id="input">—</strong><small>tokens</small></div><div><span>输出</span><strong id="output">—</strong><small>tokens</small></div></section>
+  <div class="track"><i id="fill"></i></div>
+  <footer><span id="scope-label">本轮提问</span><span id="timestamp">发送后标记进行中 · 结束后更新</span></footer>
+  <section id="details" hidden><label>观察对话<select id="tasks"><option value="">选择对话</option></select></label><label>统计范围<select id="scope"><option value="turn">本轮提问</option><option value="last">最近请求</option><option value="total">任务累计</option></select></label><p id="more"></p><p>上下文按最近已上报输入估计，生成中可能滞后。缓存比例只针对输入；累计用量不代表套餐额度。</p><p id="binding"></p></section>
+  <p id="error" role="status" hidden></p>
+</main><script>/* PANEL_JS */</script></body></html>

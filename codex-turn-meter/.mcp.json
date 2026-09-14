@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "meter": {
+      "command": "python",
+      "args": [
+        "-u",
+        "./server/server.py"
+      ],
+      "cwd": ".",
+      "env_vars": [
+        "CODEX_HOME"
+      ]
+    }
+  }
+}

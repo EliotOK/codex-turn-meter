@@ -1,0 +1,6 @@
+{
+  "stdio_handshake": true,
+  "tools": 4,
+  "resource": true,
+  "clean_shutdown": true
+}
